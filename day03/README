@@ -1,0 +1,46 @@
+===============================
+README: 
+1. Running the Python unittests
+2. Running the C++ unittests
+3. Compiling the C++ code 
+===============================
+
+## 1. Running the Python unittests
+
+python3 -m unittest test_day03_part1.py
+
+
+## 2. Running the C++ unittests
+
+cd build
+./test_day03_part2
+
+
+## 3. Compiling the C++ code 
+
+Getting cmake to generate a build.ninja file (instead of a Makefile)
+--------------------------------------------------------------------
+
+To have cmake generate ninja.build files instead of Makefiles, do this:
+(it's more usual to build into a subdir called build with cmake)
+
+cd build
+cmake -GNinja ..
+ninja
+
+Note: ninja does the actual compiling (and linking)
+
+
+Getting cmake to generate a Makefile (this is the default behaviour)
+--------------------------------------------------------------------
+
+cmake CMakeLists.txt
+make
+
+or just
+
+cmake .
+make
+
+Note: make does the actual compiling (and linking)
+
