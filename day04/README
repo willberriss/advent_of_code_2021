@@ -1,0 +1,29 @@
+===============================
+README: 
+1. Running the program
+2. Running the C++ unittests
+3. Compiling the C++ code 
+===============================
+
+## 1. Running the programm
+
+cd build
+day04_part1 ../boards.txt < ../random-numbers.txt
+
+
+## 2. Running the C++ unittests
+
+cd build
+./test_day04_part1 < ../test-random-numbers.txt
+
+
+## 3. Compiling the C++ code 
+
+Note: We tell CMake to generate a build.ninja file (instead of a Makefile)
+
+cd build
+cmake -GNinja ..
+ninja
+
+Note: ninja does the actual compiling (and linking)
+
